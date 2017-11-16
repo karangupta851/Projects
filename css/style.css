@@ -1,2 +1,28 @@
-.container{width:100%;border:solid 1px;}
-.main{border:solid 1px;width:100%; float:left;}
+
+.container {
+  width: 100%;
+  border: solid 1px;
+}
+.main {
+  width: 100%;
+  border: solid 1px;
+}
+table {
+  margin: auto;
+}
+form {
+  width: 80%;
+  border: solid 1px;
+  margin: auto;
+}
+input {
+  padding: 9px 50px;
+  text-align: center;
+  text-transform: capitalize;
+}
+td {
+  text-align: center;
+}
+#dob {
+  width: 100%;
+}

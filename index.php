@@ -18,8 +18,8 @@
               <td><input type="date" name="dob" id="dob" placeholder="Date Of Birth"></td>
             <tr>
                <tr>
-              <td><input type="checkbox" name="male" value="male">Male</td>
-              <td><input type="checkbox" name="female" value="female">FeMale</td>
+              <td><input type="radio" name="male" value="male">Male<input type="radio" name="female" value="female">FeMale</td>
+              <td></td>
             </tr>
             <tr>
               <td><input type="text" name="fname" id="fname" placeholder="First Name"></td>

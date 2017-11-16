@@ -19,7 +19,7 @@
               <td><input type="date" name="dob" id="dob" placeholder="Date Of Birth"></td>
             <tr>
                <tr>
-              <td><input type="radio" name="male" value="male">Male<input type="radio" name="female" value="female">FeMale</td>
+              <td><input type="radio" name="gender" value="male">Male<input type="radio" name="gender" value="female">FeMale</td>
               <td><input type="text" name="phno" id="phno" placeholder="Phone Number"></td>
             </tr>
             <tr>

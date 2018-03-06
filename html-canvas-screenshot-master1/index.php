@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Screenshot using html2canvas</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+		<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<script src="html2canvas.js"></script>
+	<script src="jscolor.js"></script>
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+<div class="row">
+<div class="col-md-8">
+<table width="200" border="1">
+  <tr>
+    <td>Upload Image File</td>
+    <td><input type='file' onchange="readURL(this);" /></td>
+  </tr>
+  <tr>
+    <td>Set Font Size</td>
+    <td><input id="slider" type ="range" min ="12" max="100" value ="0"/> </td>
+  </tr>
+  <tr>
+    <td>Set Font Color</td>
+    <td><button class="jscolor {valueElement:'chosen-value', onFineChange:'setTextColor(this)'}">Set Font Color</button></td>
+  </tr>
+  <tr>
+    <td>Set Font Color</td>
+    <td><button class="jscolor {valueElement:'chosen-value1', onFineChange:'setTextColor1(this)'}">Set Font Color</button></td>
+  </tr>
+  <tr>
+    <td>Set Background Color</td>
+    <td><button class="jscolor {valueElement:'chosen-value2', onFineChange:'setTextColor2(this)'}">Set Background Color</button></td>
+  </tr>
+  <select id="selected"><option value="slider">FontSize</option><option value="width">Width</option></select>
+</table>
+</div>
+
+	<div id="capture" class="capture">
+		<div class="movable_div"> <h1>Agurchand</h1> </div>
+		<div class="movable_div1"> <p>abc</p> </div>
+	</div>
+	<div style="margin-top: 50px; text-align: center;">
+		<button id="take_screenshoot">Take Screenshot</button>
+	</div>
+
+	<script type="text/javascript">
+	$(function(){	
+			
+			//to make a div draggable
+			$('.movable_div').draggable(
+				{containment: "#canvas", scroll: false}
+			);
+			$('.movable_div1').draggable(
+				{containment: "#canvas", scroll: false}
+			);
+			//to capture the entered text in the textbox 
+			$('#textbox').keyup(function(){
+				var text = $(this).val();
+				$('.movable_div').text(text);
+			});	
+			$('#textbox1').keyup(function(){
+				var text = $(this).val();
+				$('.movable_div1').text(text);
+			});	
+			//font size handler here. 
+			$('#capture').change(function(){
+				Width = $(this).val();
+				$('.capture').css('width', Width+'%');
+			});	
+			
+			//to change the background once the user select
+			//$('#background').change(function(){
+//				var background = $(this).val();
+//				$('#canvas').css('background', 'url(bg_img/'+background+')');
+//			});
+			
+			//font size handler here. 
+			$('#slider').change(function(){
+				fontSize = $(this).val();
+				$('.movable_div').css('font-size', fontSize+'px');
+			});		
+			$('#slider').change(function(){
+				fontSize = $(this).val();
+				$('.movable_div1').css('font-size', fontSize+'px');
+			});
+	
+	
+		var dataURL = {};
+		$('#take_screenshoot').click(function(){
+			html2canvas(document.querySelector("#capture")).then(canvas => {
+				document.body.appendChild(canvas);
+
+	    //console.log(canvas.toDataURL());
+	    dataURL = canvas.toDataURL();
+	    post_data(dataURL);  	
+
+	  });
+
+		});
+		});
+
+
+		function post_data(imageURL){
+		//console.log(imageURL);
+		$.ajax({
+			url: "save_data.php",
+			type: "POST",
+			data: {image: imageURL},
+			dataType: "html",
+			success: function() {
+				alert('Success!!');
+				<!--location.reload();-->
+				window.location('screenshot.html');
+			}
+		});
+		
+	}
+	
+	     function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    document.getElementById('capture').style.backgroundImage = "url(" + reader.result + ")";  
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+     }
+
+</script>
+
+<script>
+	function setTextColor(picker) {
+		document.getElementsByTagName('h1')[0].style.color = '#' + picker.toString()
+	}
+	</script>
+	<script>
+	function setTextColor1(picker) {
+		document.getElementsByTagName('p')[0].style.color = '#' + picker.toString()
+	}
+	</script>
+	<script>
+	function setTextColor2(picker) {
+		document.getElementById('capture').style.background = '#' + picker.toString()
+	}
+	</script>
+	</div>
+	</div>
+</body>
+</html>

@@ -29,6 +29,7 @@
             <button class="jscolor {valueElement:'chosen-value', onFineChange:'setTextColor(this)'}" >Set Font Color</button>
         </div>
 	    </div>
+	    <div class="col-md-5">
  <div class="form-group">
 		<label for="fontColor">Set Font Color</label>
             <button class="jscolor {valueElement:'chosen-value1', onFineChange:'setTextColor1(this)'}">Set Font Color</button>
@@ -40,6 +41,7 @@
 		    <div class="form-group">
 		    <button id="take_screenshoot">Take Screenshot</button>
 		    </div>
+	    </div>
     </form>
 	<div id="capture" class="capture">
 		<div class="movable_div"> <h1>Agurchand</h1> </div>

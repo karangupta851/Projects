@@ -17,27 +17,26 @@
 
 	
 
-    <form>
-	    <div class="col-md-4">
-<div class="panel panel-default">
+    <form class="form-inline">
+
         <div class="form-group">
-		<label for="imageUpload">Upload Image File</label>
+
+            <label class="sr-only" for="inputEmail">Upload Image File</label>
+
             <input type="file" class="form-control" onchange="readURL(this);" />
+
         </div>
+
         <div class="form-group">
 
             <label for="fontSize">Set Font Size</label>
             <input id="slider" type ="range" min ="12" max="100" value ="0"/>
         </div>
-	    <div class="form-group">
+<div class="form-group">
 		<label for="fontColor">Set Font Color</label>
             <button class="jscolor {valueElement:'chosen-value', onFineChange:'setTextColor(this)'}" >Set Font Color</button>
         </div>
-	    </div>
-		    </div>
-	    <div class="col-md-4">
-	    <div class="panel panel-default">
-	    <div class="form-group">
+ <div class="form-group">
 		<label for="fontColor">Set Font Color</label>
             <button class="jscolor {valueElement:'chosen-value1', onFineChange:'setTextColor1(this)'}">Set Font Color</button>
         </div>
@@ -48,11 +47,7 @@
 		    <div class="form-group">
 		    <button id="take_screenshoot">Take Screenshot</button>
 		    </div>
-	    </div>
-</div>
     </form>
-
-
 	<div id="capture" class="capture">
 		<div class="movable_div"> <h1>Agurchand</h1> </div>
 		<div class="movable_div1"> <p>abc</p> </div>

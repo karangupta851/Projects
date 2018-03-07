@@ -18,7 +18,7 @@
 	
 
     <form>
-
+<div class="panel panel-default">
         <div class="form-group">
 		<label for="imageUpload">Upload Image File</label>
             <input type="file" class="form-control" onchange="readURL(this);" />
@@ -30,8 +30,10 @@
         </div>
 	    <div class="form-group">
 		<label for="fontColor">Set Font Color</label>
-            <button class="jscolor {valueElement:'chosen-value', onFineChange:'setTextColor(this)'}">Set Font Color</button>
+            <button class="jscolor {valueElement:'chosen-value', onFineChange:'setTextColor(this)'}" >Set Font Color</button>
         </div>
+	    </div>
+	    <div class="panel panel-default">
 	    <div class="form-group">
 		<label for="fontColor">Set Font Color</label>
             <button class="jscolor {valueElement:'chosen-value1', onFineChange:'setTextColor1(this)'}">Set Font Color</button>
@@ -40,7 +42,10 @@
 		<label for="backgroundColor">Set Background Color</label>
             <button class="jscolor {valueElement:'chosen-value2', onFineChange:'setTextColor2(this)'}">Set Background Color</button>
         </div>
-        <button type="submit" class="btn btn-primary">Login</button>
+		    <div class="form-group">
+		    <button id="take_screenshoot">Take Screenshot</button>
+		    </div>
+	    </div>
 
     </form>
 </div>
@@ -49,8 +54,8 @@
 		<div class="movable_div"> <h1>Agurchand</h1> </div>
 		<div class="movable_div1"> <p>abc</p> </div>
 	</div>
-	<div style="margin-top: 50px; text-align: center;">
-		<button id="take_screenshoot">Take Screenshot</button>
+	<div>
+		
 	</div>
 
 	<script type="text/javascript">

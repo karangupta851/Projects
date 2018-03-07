@@ -34,6 +34,7 @@
             <button class="jscolor {valueElement:'chosen-value', onFineChange:'setTextColor(this)'}" >Set Font Color</button>
         </div>
 	    </div>
+		    <div>
 	    <div class="col-md-4">
 	    <div class="panel panel-default">
 	    <div class="form-group">

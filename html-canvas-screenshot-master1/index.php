@@ -12,54 +12,15 @@
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 </head>
 <body>
-	
-
-    <form class="form-inline">
-
-        <div class="form-group">
-
-            <label class="sr-only" for="inputEmail">Email</label>
-
-            <input type="email" class="form-control" id="inputEmail" placeholder="Email">
-
-        </div>
-
-        <div class="form-group">
-
-            <label class="sr-only" for="inputPassword">Password</label>
-
-            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-
-        </div>
-
-        <div class="checkbox">
-
-            <label><input type="checkbox"> Remember me</label>
-
-        </div>
-
-        <button type="submit" class="btn btn-primary">Login</button>
-
-    </form>
-
-
 <div class="container">
 <div class="row">
-
-	
-
-    <form class="form-inline">
-
+    <form class="col-md-12">
+	    <div class="col-md-5">
         <div class="form-group">
-
             <label class="sr-only" for="inputEmail">Upload Image File</label>
-
             <input type="file" class="form-control" onchange="readURL(this);" />
-
         </div>
-
         <div class="form-group">
-
             <label for="fontSize">Set Font Size</label>
             <input id="slider" type ="range" min ="12" max="100" value ="0"/>
         </div>
@@ -67,6 +28,7 @@
 		<label for="fontColor">Set Font Color</label>
             <button class="jscolor {valueElement:'chosen-value', onFineChange:'setTextColor(this)'}" >Set Font Color</button>
         </div>
+	    </div>
  <div class="form-group">
 		<label for="fontColor">Set Font Color</label>
             <button class="jscolor {valueElement:'chosen-value1', onFineChange:'setTextColor1(this)'}">Set Font Color</button>

@@ -12,6 +12,37 @@
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 </head>
 <body>
+	
+
+    <form class="form-inline">
+
+        <div class="form-group">
+
+            <label class="sr-only" for="inputEmail">Email</label>
+
+            <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+
+        </div>
+
+        <div class="form-group">
+
+            <label class="sr-only" for="inputPassword">Password</label>
+
+            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+
+        </div>
+
+        <div class="checkbox">
+
+            <label><input type="checkbox"> Remember me</label>
+
+        </div>
+
+        <button type="submit" class="btn btn-primary">Login</button>
+
+    </form>
+
+
 <div class="container">
 <div class="row">
 

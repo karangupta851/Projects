@@ -15,29 +15,34 @@
 <div class="container">
 <div class="row">
 <div class="col-md-8">
-<table width="200" border="1">
-  <tr>
-    <td>Upload Image File</td>
-    <td><input type='file' onchange="readURL(this);" /></td>
-  </tr>
-  <tr>
-    <td>Set Font Size</td>
-    <td><input id="slider" type ="range" min ="12" max="100" value ="0"/> </td>
-  </tr>
-  <tr>
-    <td>Set Font Color</td>
-    <td><button class="jscolor {valueElement:'chosen-value', onFineChange:'setTextColor(this)'}">Set Font Color</button></td>
-  </tr>
-  <tr>
-    <td>Set Font Color</td>
-    <td><button class="jscolor {valueElement:'chosen-value1', onFineChange:'setTextColor1(this)'}">Set Font Color</button></td>
-  </tr>
-  <tr>
-    <td>Set Background Color</td>
-    <td><button class="jscolor {valueElement:'chosen-value2', onFineChange:'setTextColor2(this)'}">Set Background Color</button></td>
-  </tr>
-  <select id="selected"><option value="slider">FontSize</option><option value="width">Width</option></select>
-</table>
+	
+
+    <form>
+
+        <div class="form-group">
+		<label for="imageUpload">Upload Image File</label>
+            <input type="file" class="form-control" onchange="readURL(this);" />
+        </div>
+        <div class="form-group">
+
+            <label for="fontSize">Set Font Size</label>
+            <input id="slider" type ="range" min ="12" max="100" value ="0"/>
+        </div>
+	    <div class="form-group">
+		<label for="fontColor">Set Font Color</label>
+            <button class="jscolor {valueElement:'chosen-value', onFineChange:'setTextColor(this)'}">Set Font Color</button>
+        </div>
+	    <div class="form-group">
+		<label for="fontColor">Set Font Color</label>
+            <button class="jscolor {valueElement:'chosen-value1', onFineChange:'setTextColor1(this)'}">Set Font Color</button>
+        </div>
+	    <div class="form-group">
+		<label for="backgroundColor">Set Background Color</label>
+            <button class="jscolor {valueElement:'chosen-value2', onFineChange:'setTextColor2(this)'}">Set Background Color</button>
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+
+    </form>
 </div>
 
 	<div id="capture" class="capture">

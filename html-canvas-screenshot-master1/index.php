@@ -14,10 +14,11 @@
 <body>
 <div class="container">
 <div class="row">
-<div class="col-md-8">
+
 	
 
     <form>
+	    <div class="col-md-4">
 <div class="panel panel-default">
         <div class="form-group">
 		<label for="imageUpload">Upload Image File</label>
@@ -33,6 +34,7 @@
             <button class="jscolor {valueElement:'chosen-value', onFineChange:'setTextColor(this)'}" >Set Font Color</button>
         </div>
 	    </div>
+	    <div class="col-md-4">
 	    <div class="panel panel-default">
 	    <div class="form-group">
 		<label for="fontColor">Set Font Color</label>
@@ -46,9 +48,9 @@
 		    <button id="take_screenshoot">Take Screenshot</button>
 		    </div>
 	    </div>
-
-    </form>
 </div>
+    </form>
+
 
 	<div id="capture" class="capture">
 		<div class="movable_div"> <h1>Agurchand</h1> </div>

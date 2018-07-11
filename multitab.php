@@ -89,7 +89,7 @@ td{ font-size:14px; border-right:solid 1px red;}
     <p><input placeholder="Generated Pin" oninput="this.className = ''" name="txtpin" id="txtpin" readonly="" disabled="disabled" value="<?php echo @$a; ?>"></p>
   </div>
   <div class="tab">Payment Proof:
-    <p><input type="file" oninput="this.className = ''" name="email" id="proof"></p>
+    <p><input type="file" oninput="this.className = ''" name="proof" id="proof"></p>
   </div>
   
   <div style="overflow:auto;">
